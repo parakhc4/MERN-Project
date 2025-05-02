@@ -8,12 +8,13 @@ import NavLinks from './NavLinks.js';
 import SideDrawer from './SideDrawer.js';
 import Backdrop from '../UIElements/Backdrop.js';
 
+
 const MainNavigation = props =>{
     const [drawerIsOpen, setDrawerIsOpen] = useState(false);
 
-    const openDrawer = () => {setDrawerIsOpen(true)};
+    const openDrawerHandler = () => {setDrawerIsOpen(true)};
 
-    const closeDrawer = () => {setDrawerIsOpen(false)};
+    const closeDrawerHandler = () => {setDrawerIsOpen(false)};
 
     return (
         // React.fragment is built just for those cases 
@@ -22,22 +23,21 @@ const MainNavigation = props =>{
         // object. Hence, it acts as a wrapper
     <React.Fragment>
 
-        {drawerIsOpen && <Backdrop onClick = {closeDrawer}/>}
+        {drawerIsOpen && <Backdrop onClick = {closeDrawerHandler}/>}
         
-        {/* Check if drawerIsOpen, if yes then show otherwise null */}
-        {/* BAsically an AND operation to check */}
-        {drawerIsOpen && 
-        (<SideDrawer>
+        {/* Here  */}
+
+        <SideDrawer show = {drawerIsOpen} onClick={closeDrawerHandler}>
             <nav className ="main-navigation__drawer-nav">
                 <NavLinks/>
             </nav>
         </SideDrawer>
-        )}
+        
         
         <MainHeader>
             {/* Anything entered between MainHeader 
             is forwarded to props.children*/}
-            <button className="main-navigation__menu-btn" onClick={openDrawer}>
+            <button className="main-navigation__menu-btn" onClick={openDrawerHandler}>
                 <span/>
                 <span/>
                 <span/>
