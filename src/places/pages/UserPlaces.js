@@ -11,7 +11,7 @@ const DUMMY_PLACES = [
         address : 'Vought Tower, Toronto, CA',
         location : {
             lat : 40.74,
-            lng: -152.03
+            lng: -79.34
         },
          creator : 'u1'
     },
