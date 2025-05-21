@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/places_app/static/css/main.893a9c50.css",
+    "main.js": "/places_app/static/js/main.5172117c.js",
+    "index.html": "/places_app/index.html",
+    "main.893a9c50.css.map": "/places_app/static/css/main.893a9c50.css.map",
+    "main.5172117c.js.map": "/places_app/static/js/main.5172117c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.893a9c50.css",
+    "static/js/main.5172117c.js"
+  ]
+}
